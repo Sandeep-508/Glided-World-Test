@@ -51,6 +51,20 @@
     background-size: cover;
 }
 
+.token_sec {
+    background-image: url("../images/png/token_back_image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.uniswap_back_image {
+    background-image: url("../images/png/uniswap_back_image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 /* <----------------------------------------------------------- width and height -----------------------------------------------------------------------> */
 .max_w_text {
     max-width: 1024px;
@@ -62,6 +76,21 @@
     min-height: 248px;
 }
 
+.token_box {
+    max-width: 312px;
+    min-height: 181px;
+    border-radius: 13px;
+    background: var(--token_box_back);
+    transition: all 300ms linear;
+}
+
+.dot_image {
+    width: 4px;
+    height: 4px;
+    background: var(--color-white);
+    border-radius: 50%;
+}
+
 /* <-----------------------------------------------------------spacings --------------------------------------------------------------------------------> */
 
 .gap_37px {
@@ -70,6 +99,18 @@
 
 .gap_40px {
     gap: 40px;
+}
+
+.mt_21px {
+    margin-top: 21px;
+}
+
+.mb_41px {
+    margin-bottom: 41px;
+}
+
+.mt_10px {
+    margin-top: 10px;
 }
 
 .gap_10px {
@@ -102,6 +143,10 @@
     margin-top: -5px;
 }
 
+.pb_59px {
+    padding-bottom: 59px;
+}
+
 .pe_141px {
     padding-right: 141px;
 }
@@ -110,9 +155,23 @@
     padding-bottom: 110px;
 }
 
+.uniswap_py {
+    padding-top: 300px;
+    padding-bottom: 220px;
+}
+
 .py_glided {
     padding-top: 228px;
     padding-bottom: 228px;
+}
+
+.mt_13px {
+    margin-top: 13px;
+}
+
+.py_token {
+    padding-top: 130px;
+    padding-bottom: 136px;
 }
 
 /* <-----------------------------------------------------------btn changes -----------------------------------------------------------------------------> */
@@ -143,8 +202,12 @@
 
 /* <----------------------------------------------------------- positions ------------------------------------------------------------------------------> */
 
-
-
+.back_image_pos {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 /* <----------------------------------------------------------- borders --------------------------------------------------------------------------------> */
 
@@ -155,6 +218,21 @@
     border-radius: 16px;
     padding: 5px;
     background: var(--lg_text);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.token_box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 1px;
+    background: var(--border_token);
     -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
@@ -212,6 +290,11 @@
 .button_header_norm:hover {
     background: var(--nav_btn-lg);
     box-shadow: none;
+}
+
+.token_box:hover {
+    background: var(--token_hover);
+
 }
 
 /* <----------------------------------------------------------- AOS ------------------------------------------------------------------------------------> */

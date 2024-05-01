@@ -30,9 +30,12 @@
     --color-white: #FFFFFF;
     --black-color: #000000;
     --nav_btn-lg: linear-gradient(149.67deg, #815CC8 29.44%, #1BABFE 81.54%);
+    --token_hover: linear-gradient(149.67deg, #815CC8 29.44%, #1BABFE 81.54%);
     --text-color: #1BABFE;
     --nav_back_color: #0000001A;
     --lg_text: linear-gradient(90deg, #815CC8 0%, #1BABFE 100%);
+    --token_box_back: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(196, 196, 196, 0) 100%, rgba(255, 255, 255, 0.03) 100%);
+    --border_token: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
 
     /* font-family */
 
