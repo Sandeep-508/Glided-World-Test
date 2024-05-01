@@ -563,7 +563,7 @@ a {
 /* <----------------------------------------------------------- media queries -------------------------------------------------------------------------------> */
 
 @media (max-width: 992px) {
-    .fs_heading_text {
+    /* .fs_heading_text {
         font-size: var(--fs-40) !important;
     }
 
@@ -580,7 +580,7 @@ a {
     .glided_text::after {
         bottom: 0 !important;
         right: 0 !important;
-    }
+    } */
 }
 
 @media (min-width: 992px) {
@@ -686,7 +686,7 @@ a {
 }
 
 @media (max-width: 768px) {
-    .fs_heading_text {
+    /* .fs_heading_text {
         font-size: var(--fs-36) !important;
     }
 
@@ -711,17 +711,17 @@ a {
     .token_sec {
         padding-bottom: 80px !important;
         padding-top: 80px !important;
-    }
+    } */
 }
 
 @media (min-width: 992px) {
-    .pe_141px {
+    /* .pe_141px {
         padding-right: 141px;
-    }
+    } */
 }
 
 @media (max-width: 576px) {
-    .fs_heading_text {
+    /* .fs_heading_text {
         font-size: var(--fs-25) !important;
     }
 
@@ -749,9 +749,9 @@ a {
 
     .fs_sub_text {
         font-size: var(--fs-14);
-    }
+    } */
 
-    .py_glided {
+    /* .py_glided {
         padding-bottom: 80px !important;
         padding-top: 80px !important;
     }
@@ -768,16 +768,16 @@ a {
         display: flex;
         align-items: center;
         justify-content: center;
-    }
+    } */
 
 }
 
 @media (max-width: 1400px) {
-    .gap_media {
+    /* .gap_media {
         gap: 20px !important;
     }
 
     .glided_text::after {
         bottom: -55px !important;
-    }
+    } */
 }
