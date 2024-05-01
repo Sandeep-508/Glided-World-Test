@@ -1,0 +1,232 @@
+@import url(./root.css);
+
+/* <----------------------------------------------------------- Normal CSS -----------------------------------------------------------------------------> */
+
+.change_text {
+    color: var(--text-color);
+}
+
+.countdown-text {
+    color: var(--text-color);
+}
+
+.nav_back {
+    background: var(--nav_back_color);
+}
+
+.opaci_70 {
+    opacity: 70%;
+}
+
+.lg_text {
+    background: var(--lg_text) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+/* <----------------------------------------------------------- Backimages or BackColor ----------------------------------------------------------------> */
+
+.hero_back_img {
+    background-image: url("../images/png/hero_image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.utility_back {
+    background-image: url("../images/png/utility_back_image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.play_sec_back {
+    background: var(--black-color);
+}
+
+.glided_back_image {
+    background-image: url("../images/png/glided_sec_back_img.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* <----------------------------------------------------------- width and height -----------------------------------------------------------------------> */
+.max_w_text {
+    max-width: 1024px;
+    min-height: 132px;
+}
+
+.max_w_glided_text {
+    max-width: 940px;
+    min-height: 248px;
+}
+
+/* <-----------------------------------------------------------spacings --------------------------------------------------------------------------------> */
+
+.gap_37px {
+    gap: 37px;
+}
+
+.gap_40px {
+    gap: 40px;
+}
+
+.gap_10px {
+    gap: 10px;
+}
+
+.mb_20px {
+    margin-bottom: 20px;
+}
+
+.mb_22px {
+    margin-bottom: 22px;
+}
+
+.pb_hero_media {
+    padding-bottom: 129px;
+}
+
+.my_19px {
+    margin-top: 19px;
+    margin-bottom: 19px;
+}
+
+.py_utility_sec_media {
+    padding-top: 105px;
+    padding-bottom: 194px;
+}
+
+.-mt-5px {
+    margin-top: -5px;
+}
+
+.pe_141px {
+    padding-right: 141px;
+}
+
+.pb_earn_sec {
+    padding-bottom: 110px;
+}
+
+.py_glided {
+    padding-top: 228px;
+    padding-bottom: 228px;
+}
+
+/* <-----------------------------------------------------------btn changes -----------------------------------------------------------------------------> */
+
+.button_nav {
+    background: var(--nav_btn-lg);
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 79px;
+    border: 1px solid transparent;
+    box-shadow: 0px 8px 30px 0px var(--text-color);
+    transition: all 300ms linear;
+}
+
+.button_header_norm {
+    background: transparent;
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 79px;
+    border: 1px solid var(--color-white);
+    box-shadow: 0px 8px 30px 0px var(--text-color);
+    transition: all 300ms linear;
+}
+
+/* <----------------------------------------------------------- positions ------------------------------------------------------------------------------> */
+
+
+
+
+/* <----------------------------------------------------------- borders --------------------------------------------------------------------------------> */
+
+.border_lg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 5px;
+    background: var(--lg_text);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+/* <----------------------------------------------------------- before and after -----------------------------------------------------------------------> */
+
+.glided_text::before {
+    content: "";
+    position: absolute;
+    left: -68px;
+    top: -56px;
+    width: 102px;
+    height: 102px;
+    background-image: url(../images/svg/before_comma.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.glided_text::after {
+    content: "";
+    position: absolute;
+    right: 182px;
+    bottom: -56px;
+    width: 102px;
+    height: 102px;
+    background-image: url(../images/svg/after_comma.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* <----------------------------------------------------------- Timeline -------------------------------------------------------------------------------> */
+/* <----------------------------------------------------------- slick slider ----------------------------------------------------------------------------> */
+
+
+
+/* <----------------------------------------------------------- Hover Effects --------------------------------------------------------------------------> */
+
+
+.nav_link:hover {
+    -webkit-text-stroke: thin;
+}
+
+.button_nav:hover {
+    background: transparent;
+    border: 1px solid white;
+    box-shadow: none;
+}
+
+.button_header_norm:hover {
+    background: var(--nav_btn-lg);
+    box-shadow: none;
+}
+
+/* <----------------------------------------------------------- AOS ------------------------------------------------------------------------------------> */
+
+/* <----------------------------------------------------------- Preloader ------------------------------------------------------------------------------> */
+
+/* <----------------------------------------------------------- scroll to top --------------------------------------------------------------------------> */
+
+/* <----------------------------------------------------------- Progress -------------------------------------------------------------------------------> */
+
+/* <----------------------------------------------------------- z-indexes ------------------------------------------------------------------------------> */
+
+/* <----------------------------------------------------------- animated Button ------------------------------------------------------------------------> */
+
+
+
+/* <----------------------------------------------------------- animated Menuicon ----------------------------------------------------------------------> */
+/* <----------------------------------------------------------- timeline codepen  ----------------------------------------------------------------------> */
