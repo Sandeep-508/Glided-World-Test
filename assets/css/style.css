@@ -18,10 +18,25 @@
     opacity: 70%;
 }
 
+.opa_60 {
+    opacity: 60%;
+}
+
 .lg_text {
     background: var(--lg_text) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
+}
+
+.accoridon_items {
+    backdrop-filter: blur(20px);
+}
+
+.line {
+    width: 1px;
+    height: 35px;
+    background: var(--color-white);
+    opacity: 60%;
 }
 
 /* <----------------------------------------------------------- Backimages or BackColor ----------------------------------------------------------------> */
@@ -65,10 +80,22 @@
     background-size: cover;
 }
 
+.footer_back {
+    background-image: url("../images/png/footer_back_image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 /* <----------------------------------------------------------- width and height -----------------------------------------------------------------------> */
 .max_w_text {
     max-width: 1024px;
     min-height: 132px;
+}
+
+.footer_max_w_text {
+    max-width: 367px;
+    min-height: 87px;
 }
 
 .max_w_glided_text {
@@ -97,6 +124,19 @@
     height: 4px;
     background: var(--color-white);
     border-radius: 50%;
+}
+
+.svg_box {
+    width: 31px;
+    height: 31px;
+}
+
+.white_footer_line {
+    width: 100%;
+    height: 1px;
+    background: var(--color-white);
+    opacity: 10%;
+    margin-top: 48px;
 }
 
 /* <-----------------------------------------------------------spacings --------------------------------------------------------------------------------> */
@@ -129,11 +169,23 @@
     margin-bottom: 20px;
 }
 
+.gap_13px {
+    gap: 13px;
+}
+
 .mb_22px {
     margin-bottom: 22px;
 }
 
-.pb_hero_media {
+.mb_27px {
+    margin-bottom: 27px;
+}
+
+.pb_226px {
+    padding-bottom: 226px;
+}
+
+.py_hero_media {
     padding-bottom: 129px;
 }
 
@@ -153,10 +205,6 @@
 
 .pb_59px {
     padding-bottom: 59px;
-}
-
-.pe_141px {
-    padding-right: 141px;
 }
 
 .pb_earn_sec {
@@ -187,9 +235,22 @@
     padding-bottom: 192px;
 }
 
+.mb_6px {
+    margin-bottom: 6px;
+}
+
 .px_power_box {
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.px_19px {
+    padding-left: 19px;
+    padding-right: 19px;
+}
+
+.gap_6px {
+    gap: 6px;
 }
 
 /* <-----------------------------------------------------------btn changes -----------------------------------------------------------------------------> */
@@ -227,6 +288,10 @@
     transform: translateY(-50%);
 }
 
+.brdr {
+    position: relative;
+}
+
 /* <----------------------------------------------------------- borders --------------------------------------------------------------------------------> */
 
 .border_lg::after {
@@ -251,6 +316,59 @@
     border-radius: 16px;
     padding: 1px;
     background: var(--border_token);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.brdr::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 3px;
+    padding: 1px;
+    background: var(--accord_brdr);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.svg_box {
+    position: relative;
+    background: var(--footer_svg_box);
+}
+
+.svg_box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 0.78px;
+    background: var(--accord_brdr);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.brdr_thick {
+    position: relative;
+}
+
+.brdr_thick::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 3px;
+    padding: 3px;
+    background: var(--accord_brdr);
     -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
@@ -312,7 +430,22 @@
 
 .token_box:hover {
     background: var(--token_hover);
+}
 
+/* <----------------------------------------------------------- Accordion ----------------------------------------------------------------> */
+
+
+.disp_text {
+    display: none;
+    /* max-width: 786px; */
+    padding-bottom: 16px;
+}
+
+.accoridon_items {
+    max-width: 1038px;
+    min-height: 75px;
+    background: var(--accord_back);
+    border-radius: 3px;
 }
 
 /* <----------------------------------------------------------- AOS ------------------------------------------------------------------------------------> */

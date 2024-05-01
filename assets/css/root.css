@@ -36,6 +36,9 @@
     --lg_text: linear-gradient(90deg, #815CC8 0%, #1BABFE 100%);
     --token_box_back: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(196, 196, 196, 0) 100%, rgba(255, 255, 255, 0.03) 100%);
     --border_token: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+    --accord_brdr: linear-gradient(90.28deg, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.03) 99.96%);
+    --accord_back: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.03) 100%);
+    --footer_svg_box: linear-gradient(110.75deg, rgba(255, 255, 255, 0.1) 0.01%, rgba(255, 255, 255, 0.03) 99.99%);
 
     /* font-family */
 
@@ -151,6 +154,14 @@
 
 .container_hero {
     max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.container_accordion {
+    max-width: 1038px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 12px;
@@ -333,10 +344,6 @@
 
 .lh-38 {
     line-height: var(--lh-38);
-}
-
-.fs-40 {
-    font-size: var(--fs-40);
 }
 
 .fs-72 {
@@ -556,6 +563,38 @@ a {
 /* <----------------------------------------------------------- media queries -------------------------------------------------------------------------------> */
 
 @media (max-width: 992px) {
+    .fs_heading_text {
+        font-size: var(--fs-40) !important;
+    }
+
+    .py_hero_media {
+        padding-top: 129px;
+    }
+
+    .glided_text {
+        min-height: auto;
+        font-size: var(--fs-32);
+        line-height: var(--lh-150);
+    }
+
+    .glided_text::after {
+        bottom: 0 !important;
+        right: 0 !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .min_lg_vh_100 {
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 1200px) {
+    .fs_heading_text {
+        font-size: var(--fs-61);
+        line-height: var(--lh-150);
+    }
+
     .lg_view {
         position: fixed;
         top: 0;
@@ -629,34 +668,116 @@ a {
     .menuicon:hover span {
         background: orange;
     }
+
+    .fs_sub_text {
+        font-size: var(--fs-16);
+        line-height: var(--lh-150) !important;
+    }
+
+    .fs_token_box {
+        font-size: var(--fs-25);
+    }
 }
 
-@media (min-width: 992px) {
-    .min_lg_vh_100 {
-        min-height: 100vh;
+@media (min-width : 1201px) {
+    .d_xl_none {
+        display: none;
     }
 }
 
 @media (max-width: 768px) {
-    .fs_sub_heading_text {
-        font-size: var(--fs-32) !important;
+    .fs_heading_text {
+        font-size: var(--fs-36) !important;
+    }
+
+    .py_utility_sec_media {
+        padding-top: 90px !important;
+        padding-bottom: 100px !important;
+    }
+
+    .fs_heading {
+        font-size: var(--fs-36);
+    }
+
+    .pb_earn_sec {
+        padding-bottom: 80px !important;
+    }
+
+    .py_glided {
+        padding-bottom: 150px !important;
+        padding-top: 150px !important;
+    }
+
+    .token_sec {
+        padding-bottom: 80px !important;
+        padding-top: 80px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .pe_141px {
+        padding-right: 141px;
     }
 }
 
 @media (max-width: 576px) {
-    .fs_max_lg {
-        font-size: var(--fs-40) !important;
+    .fs_heading_text {
+        font-size: var(--fs-25) !important;
     }
 
-    .fs_lh_change {
-        font-size: var(--fs-20) !important;
+    .fs_text {
+        font-size: var(--fs-25) !important;
+    }
+
+    .py_hero_media {
+        padding-bottom: 80px;
+        padding-top: 80px;
+    }
+
+    .py_utility_sec_media {
+        padding-top: 40px !important;
+        padding-bottom: 60px !important;
+    }
+
+    .w_max_sm {
+        width: 170px;
+    }
+
+    .pb_earn_sec {
+        padding-bottom: 50px !important;
     }
 
     .fs_sub_text {
         font-size: var(--fs-14);
     }
 
-    .fs_sub_headings {
-        font-size: var(--fs-24);
+    .py_glided {
+        padding-bottom: 80px !important;
+        padding-top: 80px !important;
+    }
+
+    .glided_text {
+        font-size: var(--fs-25);
+    }
+
+    .token_box {
+        width: 100%;
+    }
+
+    .d_max_sm_prop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 1400px) {
+    .gap_media {
+        gap: 20px !important;
+    }
+
+    .glided_text::after {
+        bottom: -55px !important;
     }
 }
