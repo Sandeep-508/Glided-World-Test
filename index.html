@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Test</title>
-    <link rel="shortcut icon" href="">
+    <link rel="shortcut icon" href="./assets/images/svg/token_fir.svg">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -18,10 +18,54 @@
         integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body onload="countdown()">
+
+    <!-- preloader -->
+
+    <section class="position-fixed loading_screen d-flex flex-column align-items-center justify-content-center">
+        <div class="d-flex align-items-center justify-content-center svg_earth">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+                enable-background="new 0 0 100 100" xml:space="preserve">
+                <rect fill="#fff" width="3" height="100" transform="translate(0) rotate(180 3 50)">
+                    <animate attributeName="height" attributeType="XML" dur="1s" values="20; 100; 20"
+                        repeatCount="indefinite" />
+                </rect>
+                <rect x="17" fill="#fff" width="3" height="100" transform="translate(0) rotate(180 20 50)">
+                    <animate attributeName="height" attributeType="XML" dur="1s" values="20; 100; 20"
+                        repeatCount="indefinite" begin="0.1s" />
+                </rect>
+                <rect x="40" fill="#fff" width="3" height="100" transform="translate(0) rotate(180 40 50)">
+                    <animate attributeName="height" attributeType="XML" dur="1s" values="20; 100; 20"
+                        repeatCount="indefinite" begin="0.3s" />
+                </rect>
+                <rect x="60" fill="#fff" width="3" height="100" transform="translate(0) rotate(180 58 50)">
+                    <animate attributeName="height" attributeType="XML" dur="1s" values="20; 100; 20"
+                        repeatCount="indefinite" begin="0.5s" />
+                </rect>
+                <rect x="80" fill="#fff" width="3" height="100" transform="translate(0) rotate(180 76 50)">
+                    <animate attributeName="height" attributeType="XML" dur="1s" values="20; 100; 20"
+                        repeatCount="indefinite" begin="0.1s" />
+                </rect>
+            </svg>
+        </div>
+        <span>
+            <p class="fm_mons fw-400 fs-157 lh-188 fs_lh_max_80 max_sm_change text-white">Glided World...</p>
+        </span>
+    </section>
+
+    <!-- progress bar -->
+
+    <div class="header">
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </div>
 
     <header class="min_lg_vh_100 d-flex flex-column hero_back_img">
         <nav class="nav_back">
@@ -105,15 +149,15 @@
 
     </header>
 
-    <main class="overflow-hidden">
+    <main class="overflow-hidden -mt-5px">
 
         <!-- utility section -->
 
         <section class="py_utility_sec_media utility_back -mt-5px">
             <div class="container">
                 <div class="row justify-content-between flex-lg-row flex-column-reverse">
-                    <div
-                        class="col-lg-6 d-flex flex-column align-items-lg-start align-items-center justify-content-center">
+                    <div class="col-lg-6 d-flex flex-column align-items-lg-start align-items-center justify-content-center"
+                        data-aos="fade-right">
                         <p class="fm_jos fw-700 fs-48 lh-61 text-white fs_heading"><span class="lg_text">NFT</span>
                             Utility</p>
                         <p
@@ -132,7 +176,7 @@
                             molestie nibh parturient
                             lectus magna sed fusce diam urna. Quam magna duis imperdiet posuere iaculis.</p>
                     </div>
-                    <div class="col-lg-5 pe_141px">
+                    <div class="col-lg-5 pe_141px" data-aos="fade-left">
                         <img src="./assets/images/png/nft_utility_sec_col_image.png" alt="a cat women standing"
                             class="w-100 h-100">
                     </div>
@@ -142,12 +186,18 @@
 
         <!-- earn to play section -->
 
-        <section class="play_sec_back pb_earn_sec">
+        <section class="play_sec_back pb_earn_sec -mt-5px position-relative">
+            <div class="left_smoke_pos">
+                <img src="./assets/images/png/smoke_image_left_earn.png" alt="random smoke image" class="w-100">
+            </div>
+            <div class="right_smoke_pos">
+                <img src="./assets/images/png/smoke_img_right_earn.png" alt="random smoke image" class="w-100">
+            </div>
             <div class="container">
-                <p class="fm_jos fw-700 fs-48 lh-61 text-white text-center fs_heading_text">Play To<span
-                        class="lg_text"> Earn</span>
+                <p class="fm_jos fw-700 fs-48 lh-61 text-white text-center fs_heading_text" data-aos="zoom-in-down">Play
+                    To<span class="lg_text"> Earn</span>
                 </p>
-                <div class="d-flex align-items-center justify-content-center pb-md-5 pb-4">
+                <div class="d-flex align-items-center justify-content-center pb-md-5 pb-4" data-aos="flip-up">
                     <p class="fm_pop fw-400 fs-20 lh-32 text-white opaci_70 mb-0 text-center max_w_text fs_sub_text">
                         Gilded
                         World
@@ -158,7 +208,7 @@
                         and have boiled it
                         down to the best online gameplay that people will actually want to play!</p>
                 </div>
-                <div class="border_lg position-relative">
+                <div class="border_lg position-relative" data-aos="flip-left">
                     <img src="./assets/images/gif/earn_gif.gif" alt="a gif image" class="w-100 h-100">
                 </div>
             </div>
@@ -166,9 +216,9 @@
 
         <!-- glided section -->
 
-        <section class="glided_back_image d-flex align-items-center justify-content-center py_glided">
-            <p
-                class="fm_jos fw-400 fs-40 lh-62 text-center text-white max_w_glided_text glided_text position-relative mb-0">
+        <section class="glided_back_image d-flex align-items-center justify-content-center py_glided -mt-5px">
+            <p class="fm_jos fw-400 fs-40 lh-62 text-center text-white max_w_glided_text glided_text position-relative mb-0"
+                data-aos="zoom-out-up">
                 Gilded Games is a new type of gaming platform, partially
                 owned and
                 operated by its players. Earn Gild
@@ -178,16 +228,16 @@
 
         <!-- token -->
 
-        <section class="token_sec py_token">
+        <section class="token_sec py_token -mt-5px">
             <div class="container">
-                <p class="fm_jos fw-700 fs-48 lh-61 text-white pb_59px mb-0 text-center fs_heading_text"><span
-                        class="lg_text">$GILD</span>
+                <p class="fm_jos fw-700 fs-48 lh-61 text-white pb_59px mb-0 text-center fs_heading_text"
+                    data-aos="zoom-out-up"><span class="lg_text">$GILD</span>
                     Token Info
                 </p>
                 <div class="row d-flex align-items-center justify-content-center">
                     <div class="col-lg-3 col-md-4 col-sm-6 d_max_sm_prop">
-                        <div
-                            class="token_box position-relative d-flex flex-column align-items-center justify-content-center">
+                        <div class="token_box position-relative d-flex flex-column align-items-center justify-content-center"
+                            data-aos="fade-down-right">
                             <span>
                                 <img src="./assets/images/svg/token_fir.svg" alt="rnadom svg" class="w-100 h-100">
                             </span>
@@ -196,8 +246,8 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 d_max_sm_prop mt-sm-0 mt-4">
-                        <div
-                            class="token_box position-relative d-flex flex-column align-items-center justify-content-center">
+                        <div class="token_box position-relative d-flex flex-column align-items-center justify-content-center"
+                            data-aos="flip-left">
                             <span>
                                 <img src="./assets/images/svg/token_sec_svg.svg" alt="rnadom svg" class="w-100 h-100">
                             </span>
@@ -205,8 +255,8 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 d_max_sm_prop mt-md-0 mt-4">
-                        <div
-                            class="token_box position-relative d-flex flex-column align-items-center justify-content-center">
+                        <div class="token_box position-relative d-flex flex-column align-items-center justify-content-center"
+                            data-aos="flip-right">
                             <span>
                                 <img src="./assets/images/svg/token_third_svg.svg" alt="rnadom svg" class="w-100 h-100">
                             </span>
@@ -215,8 +265,8 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 d_max_sm_prop mt-lg-0 mt-4">
-                        <div
-                            class="token_box position-relative d-flex flex-column align-items-center justify-content-center">
+                        <div class="token_box position-relative d-flex flex-column align-items-center justify-content-center"
+                            data-aos="fade-down-left">
                             <span>
                                 <img src="./assets/images/svg/token_forth_svg.svg" alt="rnadom svg" class="w-100 h-100">
                             </span>
@@ -230,20 +280,20 @@
 
         <!-- roadmap section -->
 
-        <section class="py_roadmap bg-black">
+        <section class="py_roadmap bg-black -mt-5px">
             <div class="container-fluid">
                 <section id="process">
                     <div class="row">
                         <div class="section-heading">
-                            <p class="fm_jos fw-700 fs-48 lh-61 text-white pb_59px mb-0 text-center"><span
-                                    class="lg_text">Road</span>Map
+                            <p class="fm_jos fw-700 fs-48 lh-61 text-white pb_59px mb-0 text-center">
+                                <span class="lg_text">Road</span>Map
                             </p>
                         </div>
                     </div>
                     <div class="container">
                         <div class="row">
                             <div class="steps-timeline text-center">
-                                <div class="steps-one">
+                                <div class="steps-one" data-aos="flip-up">
                                     <div class="end-circle back-orange"></div>
                                     <div class="step-wrap">
                                         <div class="steps-stops">
@@ -254,17 +304,42 @@
                                         <div class="inverted-steps-pane">
                                             <p class="fm_pop fw-600 fs-18 lh-23 text-white mt_media">Phase 1</p>
                                             <p class="fm_pop fw-600 fs-36 lh-46 text-white">Q1 2022</p>
-                                            <p class="fm_jos fw-400 fs-18 lh-32 text-white opaci_70">Whitelist/Presale
-                                                Created</p>
-                                            <p class="fm_jos fw-400 fs-18 lh-32 text-white opaci_70">Private Sale</p>
-                                            <p class="fm_jos fw-400 fs-18 lh-32 text-white opaci_70">Public Sale</p>
-                                            <p class="fm_jos fw-400 fs-18 lh-32 text-white opaci_70">Prime Eternal Owner
-                                                Perks</p>
+                                            <div class="d-flex align-items-center gap-3">
+                                                <div class="dot_image"></div>
+                                                <p
+                                                    class="fm_mons fw-400 fs-18 lh-32 text-white opaci_70 mb-0 text-start">
+                                                    Whitelist/Presale
+                                                    Created</p>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-3 mt_13px">
+                                                <div class="dot_image"></div>
+                                                <p
+                                                    class="fm_mons fw-400 fs-18 lh-32 text-white opaci_70 mb-0 text-start">
+                                                    Private
+                                                    Sale
+                                                </p>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-3 mt_13px">
+                                                <div class="dot_image"></div>
+                                                <p
+                                                    class="fm_mons fw-400 fs-18 lh-32 text-white opaci_70 mb-0 text-start">
+                                                    Public
+                                                    Sale</p>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-3 mt_13px">
+                                                <div class="dot_image"></div>
+                                                <p
+                                                    class="fm_mons fw-400 fs-18 lh-32 text-white opaci_70 mb-0 text-start">
+                                                    Prime
+                                                    Eternal
+                                                    Owner
+                                                    Perks</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="steps-two">
+                                <div class="steps-two" data-aos="flip-down">
                                     <div class="step-wrap">
                                         <div class="steps-stops">
                                             <div class="verticle-line back-orange"></div>
@@ -272,19 +347,26 @@
                                     </div>
                                     <div class="inverted-pane-warp back-orange">
                                         <div class="inverted-steps-pane">
-                                            <p class="fm_pop fw-600 fs-18 lh-23 text-white mt_media">Phase 1</p>
-                                            <p class="fm_pop fw-600 fs-36 lh-46 text-white">Q1 2022</p>
-                                            <p class="fm_jos fw-400 fs-18 lh-32 text-white opaci_70">Whitelist/Presale
-                                                Created</p>
-                                            <p class="fm_jos fw-400 fs-18 lh-32 text-white opaci_70">Private Sale</p>
-                                            <p class="fm_jos fw-400 fs-18 lh-32 text-white opaci_70">Public Sale</p>
-                                            <p class="fm_jos fw-400 fs-18 lh-32 text-white opaci_70">Prime Eternal Owner
-                                                Perks</p>
+                                            <p class="fm_pop fw-600 fs-18 lh-23 text-white mt_media">Phase 2</p>
+                                            <p class="fm_pop fw-600 fs-36 lh-46 text-white">Q2 2022</p>
+                                            <div class="d-flex align-items-center gap-3">
+                                                <div class="dot_image"></div>
+                                                <p
+                                                    class="fm_mons fw-400 fs-18 lh-32 text-white opaci_70 mb-0 text-start">
+                                                    Token & Staking Release</p>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-3 mt_13px">
+                                                <div class="dot_image"></div>
+                                                <p
+                                                    class="fm_mons fw-400 fs-18 lh-32 text-white opaci_70 mb-0 text-start">
+                                                    Staking Gameplay
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="steps-three step_three_d_none">
+                                <div class="steps-three step_three_d_none" data-aos="flip-up">
                                     <div class="step-wrap">
                                         <div class="steps-stops">
                                             <div class="verticle-line back-orange"></div>
@@ -292,14 +374,33 @@
                                     </div>
                                     <div class="inverted-pane-warp back-blue">
                                         <div class="inverted-steps-pane">
-                                            <p class="fm_pop fw-600 fs-18 lh-23 text-white mt_media">Phase 1</p>
-                                            <p class="fm_pop fw-600 fs-36 lh-46 text-white">Q1 2022</p>
-                                            <p class="fm_jos fw-400 fs-18 lh-32 text-white opaci_70">Whitelist/Presale
-                                                Created</p>
-                                            <p class="fm_jos fw-400 fs-18 lh-32 text-white opaci_70">Private Sale</p>
-                                            <p class="fm_jos fw-400 fs-18 lh-32 text-white opaci_70">Public Sale</p>
-                                            <p class="fm_jos fw-400 fs-18 lh-32 text-white opaci_70">Prime Eternal Owner
-                                                Perks</p>
+                                            <p class="fm_pop fw-600 fs-18 lh-23 text-white mt_media">Phase 3</p>
+                                            <p class="fm_pop fw-600 fs-36 lh-46 text-white">Q3 2022</p>
+                                            <div class="d-flex align-items-center gap-3">
+                                                <div class="dot_image"></div>
+                                                <p
+                                                    class="fm_mons fw-400 fs-18 lh-32 text-white opaci_70 mb-0 text-start">
+                                                    MVP Gameplay Release</p>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-3 mt_13px">
+                                                <div class="dot_image"></div>
+                                                <p
+                                                    class="fm_mons fw-400 fs-18 lh-32 text-white opaci_70 mb-0 text-start">
+                                                    Battle Modes Release
+                                                </p>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-3 mt_13px">
+                                                <div class="dot_image"></div>
+                                                <p
+                                                    class="fm_mons fw-400 fs-18 lh-32 text-white opaci_70 mb-0 text-start">
+                                                    Land Gameplay Release</p>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-3 mt_13px">
+                                                <div class="dot_image"></div>
+                                                <p
+                                                    class="fm_mons fw-400 fs-18 lh-32 text-white opaci_70 mb-0 text-start">
+                                                    Gear Forging Release/p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -313,14 +414,29 @@
                                 </div>
                                 <div class="inverted-pane-warp back-blue">
                                     <div class="inverted-steps-pane">
-                                        <p class="fm_pop fw-600 fs-18 lh-23 text-white mt_media">Phase 1</p>
-                                        <p class="fm_pop fw-600 fs-36 lh-46 text-white">Q1 2022</p>
-                                        <p class="fm_jos fw-400 fs-18 lh-32 text-white opaci_70">Whitelist/Presale
-                                            Created</p>
-                                        <p class="fm_jos fw-400 fs-18 lh-32 text-white opaci_70">Private Sale</p>
-                                        <p class="fm_jos fw-400 fs-18 lh-32 text-white opaci_70">Public Sale</p>
-                                        <p class="fm_jos fw-400 fs-18 lh-32 text-white opaci_70">Prime Eternal Owner
-                                            Perks</p>
+                                        <p class="fm_pop fw-600 fs-18 lh-23 text-white mt_media">Phase 3</p>
+                                        <p class="fm_pop fw-600 fs-36 lh-46 text-white">Q3 2022</p>
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="dot_image"></div>
+                                            <p class="fm_mons fw-400 fs-18 lh-32 text-white opaci_70 mb-0 text-start">
+                                                MVP Gameplay Release</p>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mt_13px">
+                                            <div class="dot_image"></div>
+                                            <p class="fm_mons fw-400 fs-18 lh-32 text-white opaci_70 mb-0 text-start">
+                                                Battle Modes Release
+                                            </p>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mt_13px">
+                                            <div class="dot_image"></div>
+                                            <p class="fm_mons fw-400 fs-18 lh-32 text-white opaci_70 mb-0 text-start">
+                                                Land Gameplay Release</p>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mt_13px">
+                                            <div class="dot_image"></div>
+                                            <p class="fm_mons fw-400 fs-18 lh-32 text-white opaci_70 mb-0 text-start">
+                                                Gear Forging Release</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -333,28 +449,29 @@
 
         <!-- uniswap section -->
 
-        <section class="uniswap_py uniswap_back_image position-relative">
-            <div class="back_image_pos">
-                <img src="./assets/images/png/back_image_treasure.png" alt="random curve" class="w-100">
+        <section class="uniswap_py uniswap_back_image position-relative -mt-5px">
+            <div class="back_image_pos w_changes d_max_lg_none">
+                <img src="./assets/images/png/back_image_treasure.png" alt="random curve" class="w-100 h-100">
             </div>
             <div class="container position-relative z-3">
-                <div class="row justify-content-between">
-                    <div class="col-lg-4 d-flex align-items-start justify-content-center flex-column">
-                        <p class="fm_jos fw-700 fs-48 lh-61 text-white mb-0 text-center">Buy On <span
-                                class="lg_text">Uniswap</span>
+                <div class="row justify-content-between flex-lg-row flex-column-reverse">
+                    <div class="col-lg-4 d-flex align-items-lg-start align-items-center justify-content-center flex-column mt-lg-0 mt-4"
+                        data-aos="zoom-in-right">
+                        <p class="fm_jos fw-700 fs-48 lh-61 text-white mb-0 text-lg-start text-center fs_heading_text">
+                            Buy On <span class="lg_text">Uniswap</span>
                         </p>
                         <div class="d-flex flex-column align-items-start justify-content-center mt_21px mb_41px">
                             <div class="d-flex align-items-center gap-3">
                                 <div class="dot_image"></div>
-                                <p class="m-0 fm_jos fw-400 fs-20 lh-24 text-white">100,000+ Airdrop</p>
+                                <p class="m-0 fm_jos fw-400 fs-20 lh-24 text-white fs_sub_text">100,000+ Airdrop</p>
                             </div>
                             <div class="d-flex align-items-center gap-3 mt_10px">
                                 <div class="dot_image"></div>
-                                <p class="m-0 fm_jos fw-400 fs-20 lh-24 text-white">100,000+ Airdrop</p>
+                                <p class="m-0 fm_jos fw-400 fs-20 lh-24 text-white fs_sub_text">100,000+ Airdrop</p>
                             </div>
                             <div class="d-flex align-items-center gap-3 mt_10px">
                                 <div class="dot_image"></div>
-                                <p class="m-0 fm_jos fw-400 fs-20 lh-24 text-white">100,000+ Airdrop</p>
+                                <p class="m-0 fm_jos fw-400 fs-20 lh-24 text-white fs_sub_text">100,000+ Airdrop</p>
                             </div>
                         </div>
                         <button
@@ -365,8 +482,8 @@
                             Buy Now
                         </button>
                     </div>
-                    <div class="col-lg-4">
-                        <img src="./assets/images/png/treasure_box.png" alt="gold treasure" class="w-100 h-100">
+                    <div class="col-lg-5 d_max_lg_prop" data-aos="zoom-out">
+                        <img src="./assets/images/png/treasure_box.png" alt="gold treasure" class="w_h_treasure_image">
                     </div>
                 </div>
             </div>
@@ -374,33 +491,38 @@
 
         <!-- powered By section -->
 
-        <section class="py_powered bg-black power_Sec">
+        <section class="py_powered bg-black power_Sec -mt-5px">
 
             <div class="container">
-                <p class="fm_jos fw-700 fs-48 lh-61 text-white pb_59px mb-0 text-center"><span
+                <p class="fm_jos fw-700 fs-48 lh-61 text-white pb_59px mb-0 text-center" data-aos="zoom-out"><span
                         class="lg_text">Powered</span>
                     By:
                 </p>
-                <div class="row">
-                    <div class="col-lg-3">
+                <div class="row d_max_sm_prop d-flex align-items-center justify-content-center">
+                    <div class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-center justify-content-center"
+                        data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <div
                             class="token_box position-relative d-flex flex-column align-items-center justify-content-center px_power_box">
                             <img src="./assets/images/svg/power_1_image.svg" alt="rnadom svg" class="w-100 h-100">
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-4 col-sm-6 mt-sm-0 mt-4 d-flex align-items-center justify-content-center"
+                        data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+                        data-aos-duration="500">
                         <div
                             class="token_box position-relative d-flex flex-column align-items-center justify-content-center px_power_box">
                             <img src="./assets/images/svg/power_2_img.svg" alt="rnadom svg" class="w-100 h-100">
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-4 col-sm-6 mt-md-0 mt-4 d-flex align-items-center justify-content-center"
+                        data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
                         <div
                             class="token_box position-relative d-flex flex-column align-items-center justify-content-center px_power_box">
                             <img src="./assets/images/svg/power_3_ima.svg" alt="rnadom svg" class="w-100 h-100">
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-4 col-sm-6 mt-lg-0 mt-4 d-flex align-items-center justify-content-center"
+                        data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                         <div
                             class="token_box position-relative d-flex flex-column align-items-center justify-content-center px_power_box">
                             <img src="./assets/images/svg/power_4_iamge.svg" alt="rnadom svg" class="w-100 h-100">
@@ -412,21 +534,22 @@
 
     </main>
 
-    <footer class="footer_back">
+    <footer class="footer_back -mt-5px">
 
         <!-- FAQ -->
 
         <section>
-            <div class="container pb_226px">
-                <p class="fm_jos fw-700 fs-48 lh-61 text-white pb_59px mb-0 text-center">Frequently Asked <span
-                        class="lg_text">Question</span>
+            <div class="container pb_faq">
+                <p class="fm_jos fw-700 fs-48 lh-61 text-white pb_59px mb-0 text-center fs_heading_text pb_max_sm_0">
+                    Frequently
+                    Asked <span class="lg_text">Question</span>
                 </p>
                 <div class="container_accordion">
                     <div class="accordion mt-5">
                         <div class="accoridon_items brdr my-4 px_19px">
                             <div
                                 class="d-flex align-items-center justify-content-between cursor pb-4 click_btn gap-sm-0 gap-4 pt-4">
-                                <p class="fm_pop text-white fw-400 fs-18 lh-27 m-0 fs_lh_accordion active_change">Q1.
+                                <p class="fm_pop text-white fw-400 fs-18 lh-27 m-0 fs_lh_accordion active_change ">Q1.
                                     Lectus tristique
                                     turpis id?
                                 </p>
@@ -457,9 +580,8 @@
                         <div class="accoridon_items brdr my-4 px_19px">
                             <div
                                 class="d-flex align-items-center justify-content-between cursor pt-4 pb-4 click_btn gap-sm-0 gap-4">
-                                <p class="fm_pop text-white fw-400 fs-18 lh-27 m-0 fs_lh_accordion active_change">Q1.
-                                    Lectus tristique
-                                    turpis id?
+                                <p class="fm_pop text-white fw-400 fs-18 lh-27 m-0 fs_lh_accordion active_change ">Q2.
+                                    Ac pharetra nisl nec dignissim odio sed justo velit nisl.?
                                 </p>
                                 <span class="svg_icon">
                                     <svg width="21" height="11" viewBox="0 0 21 11" fill="none"
@@ -488,9 +610,8 @@
                         <div class="accoridon_items brdr my-4 px_19px">
                             <div
                                 class="d-flex align-items-center justify-content-between cursor pt-4 pb-4 click_btn gap-sm-0 gap-4">
-                                <p class="fm_pop text-white fw-400 fs-18 lh-27 m-0 fs_lh_accordion active_change">Q1.
-                                    Lectus tristique
-                                    turpis id?
+                                <p class="fm_pop text-white fw-400 fs-18 lh-27 m-0 fs_lh_accordion active_change ">Q3.
+                                    Arcu tristique semper neque sed condimentum.?
                                 </p>
                                 <span class="svg_icon">
                                     <svg width="21" height="11" viewBox="0 0 21 11" fill="none"
@@ -519,9 +640,8 @@
                         <div class="accoridon_items brdr my-4 px_19px">
                             <div
                                 class="d-flex align-items-center justify-content-between cursor pt-4 pb-4 click_btn gap-sm-0 gap-4">
-                                <p class="fm_pop text-white fw-400 fs-18 lh-27 m-0 fs_lh_accordion active_change">Q1.
-                                    Lectus tristique
-                                    turpis id?
+                                <p class="fm_pop text-white fw-400 fs-18 lh-27 m-0 fs_lh_accordion active_change ">Q4.
+                                    Nam imperdiet iaculis vel felis commodo?
                                 </p>
                                 <span class="svg_icon">
                                     <svg width="21" height="11" viewBox="0 0 21 11" fill="none"
@@ -550,9 +670,8 @@
                         <div class="accoridon_items brdr mt-4 px_19px">
                             <div
                                 class="d-flex align-items-center justify-content-between cursor pt-4 pb-4 click_btn gap-sm-0 gap-4">
-                                <p class="fm_pop text-white fw-400 fs-18 lh-27 m-0 fs_lh_accordion active_change">Q1.
-                                    Lectus tristique
-                                    turpis id?
+                                <p class="fm_pop text-white fw-400 fs-18 lh-27 m-0 fs_lh_accordion active_change ">Q5.
+                                    Quam faucibus sagittis sed ultrices?
                                 </p>
                                 <span class="svg_icon">
                                     <svg width="21" height="11" viewBox="0 0 21 11" fill="none"
@@ -585,7 +704,7 @@
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="col-lg-4">
-                        <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center footer_title">
                             <img src="./assets/images/svg/title_svg'.svg" alt="title image" class="w-100 h-100">
                         </div>
                         <p class="fm_pop fw-400 fs-16 lh-24 text-white mb_27px mt_13px footer_max_w_text">Lorem ipsum
@@ -595,45 +714,53 @@
                             Proin curabitur iaculis id cursus
                             dignissim.</p>
                         <div class="d-flex align-items-center gap_6px">
-                            <a href="#" class="svg_box d-flex align-items-center justify-content-center">
+                            <a href="https://discord.com/"
+                                class="svg_box d-flex align-items-center justify-content-center" target="_blank">
                                 <img src="./assets/images/svg/discord_svg_footer.svg" alt="discord">
                             </a>
-                            <a href="#" class="svg_box d-flex align-items-center justify-content-center">
+                            <a href="https://twitter.com/?lang=en-in"
+                                class="svg_box d-flex align-items-center justify-content-center" target="_blank">
                                 <img src="./assets/images/svg/twitter_svg.svg" alt="discord">
                             </a>
-                            <a href="#" class="svg_box d-flex align-items-center justify-content-center">
+                            <a href="https://web.telegram.org/"
+                                class="svg_box d-flex align-items-center justify-content-center" target="_blank">
                                 <img src="./assets/images/svg/tele_svg.svg" alt="discord">
                             </a>
-                            <a href="#" class="svg_box d-flex align-items-center justify-content-center">
+                            <a href="https://soundcloud.com/signin"
+                                class="svg_box d-flex align-items-center justify-content-center" target="_blank">
                                 <img src="./assets/images/svg/sound_svg.svg" alt="discord">
                             </a>
-                            <a href="#" class="svg_box d-flex align-items-center justify-content-center">
+                            <a href="https://www.reddit.com/"
+                                class="svg_box d-flex align-items-center justify-content-center" target="_blank">
                                 <img src="./assets/images/svg/reddit_svg.svg" alt="discord">
                             </a>
-                            <a href="#" class="svg_box d-flex align-items-center justify-content-center">
+                            <a href="https://github.com/"
+                                class="svg_box d-flex align-items-center justify-content-center" target="_blank">
                                 <img src="./assets/images/svg/github_Svg.svg" alt="discord">
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 mt-lg-0 mt-4">
                         <div class="row">
-                            <div class="col-md-6 d-flex flex-column align-items-start justify-content-center">
+                            <div class="col-6 d-flex flex-column align-items-start justify-content-center pt_min_lg">
                                 <p class="fm_jos fw-600 fs-16 lh-28 text-white mb-0">About:</p>
-                                <a href="#" class="fm_jos fw-400 fs-16 lh-28 text-white opaci_70 mt_13px mb_6px">About
+                                <a href="#"
+                                    class="fm_jos fw-400 fs-16 lh-28 text-white opaci_70 mt_13px mb_6px footer_link">About
                                     Us</a>
                                 <a href="#"
-                                    class="fm_jos fw-400 fs-16 lh-28 text-white opaci_70 mt_13px mb_6px">Career</a>
-                                <a href="#" class="fm_jos fw-400 fs-16 lh-28 text-white opaci_70 mt_13px mb-0">Gilded
+                                    class="fm_jos fw-400 fs-16 lh-28 text-white opaci_70 mt_13px mb_6px footer_link">Career</a>
+                                <a href="#"
+                                    class="fm_jos fw-400 fs-16 lh-28 text-white opaci_70 mt_13px mb-0 footer_link">Gilded
                                     Nodes</a>
                             </div>
-                            <div class="col-md-6 d-flex flex-column align-items-start justify-content-center">
+                            <div class="col-6 d-flex flex-column align-items-start justify-content-center pt_min_lg">
                                 <p class="fm_jos fw-600 fs-16 lh-28 text-white mb-0">Gilded Token:</p>
                                 <a href="#"
-                                    class="fm_jos fw-400 fs-16 lh-28 text-white opaci_70 mt_13px mb_6px">Etherscan.io</a>
+                                    class="fm_jos fw-400 fs-16 lh-28 text-white opaci_70 mt_13px mb_6px footer_link">Etherscan.io</a>
                                 <a href="#"
-                                    class="fm_jos fw-400 fs-16 lh-28 text-white opaci_70 mt_13px mb_6px">Github</a>
+                                    class="fm_jos fw-400 fs-16 lh-28 text-white opaci_70 mt_13px mb_6px footer_link">Github</a>
                                 <a href="#"
-                                    class="fm_jos fw-400 fs-16 lh-28 text-white opaci_70 mt_13px mb-0">Uniswap</a>
+                                    class="fm_jos fw-400 fs-16 lh-28 text-white opaci_70 mt_13px mb-0 footer_link">Uniswap</a>
                             </div>
                         </div>
                     </div>
@@ -643,13 +770,23 @@
             <div class="container-fluid white_footer_line">
             </div>
 
-            <div class="d-flex align-items-center justify-content-center mt-2 p b-3">
-                <p class="fm_jos fw-400 fs-16 lh-28 text-white opa_60 mb-0">© Copyright $GILD 2021</p>
-                <div class="line mx-3"></div>
-                <p class="fm_jos fw-400 fs-16 lh-28 text-white opa_60 mb-0">Policy</p>
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-center mt-2 p b-3">
+                    <p class="fm_jos fw-400 fs-16 lh-28 text-white opa_60 mb-0">© Copyright $GILD 2021</p>
+                    <div class="line mx-3"></div>
+                    <p class="fm_jos fw-400 fs-16 lh-28 text-white opa_60 mb-0">Policy</p>
+                </div>
             </div>
         </section>
     </footer>
+
+    <!-- scroll to top -->
+
+    <section class="scroll_top position-fixed z-3 shadow cursor">
+        <div class="scroll_box">
+            <img src="./assets/images/svg/scroll_top_icon.svg" alt="scroll to top icon" class="w-100 h-100">
+        </div>
+    </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -662,6 +799,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
         function countdown() {
