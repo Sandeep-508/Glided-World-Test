@@ -597,10 +597,6 @@ a {
         padding-bottom: 150px !important;
     }
 
-    .d_max_lg_none {
-        display: none;
-    }
-
     .svg_earth {
         width: 200px !important;
     }
@@ -608,6 +604,16 @@ a {
     .max_sm_change {
         font-size: var(--fs-54);
         line-height: var(--lh-150);
+    }
+
+    .w_changes {
+        width: 100% !important;
+        height: 50% !important;
+    }
+
+    .back_image_pos {
+        top: 10% !important;
+        transform: none !important;
     }
 }
 
@@ -882,6 +888,11 @@ a {
 
     .right_smoke_pos {
         display: none;
+    }
+
+    .w_h_treasure_image {
+        width: 320px !important;
+        height: 365px !important;
     }
 }
 
